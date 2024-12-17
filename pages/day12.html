@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 12</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+    <link href="../style.css" rel="stylesheet">
+</head>
+<body class="page-body">
+    <div class="container">
+        <div class="container" id="head">
+        <h1 class="text-center my-4">🎇 The End 🎆</h1>
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary" id="downloadPDFButton">Λήψη Ημερολογίου ως PDF</button>
+        </div>
+        <div class="svg-container">
+            <img src="../content/back.png" alt="Decorative SVG">
+        </div>
+        <div class="text-center">
+            <p><a href="../index.html" class="btn btn-primary">Back to Calendar</a></p>
+            <p><a href="../pages/day11.html" class="btn btn-secondary">Previous Day</a></p>
+        </div>
+    </div>
+    <script>
+        function downloadPDF() {
+            const link = document.createElement('a');
+            link.href = '../content/Ένα με την Ομάδα! A4.pdf';
+            link.download = 'Ένα με την Ομάδα! A4.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        function openPDF() {
+            window.open('../content/Ένα με την Ομάδα! A4.pdf', '_blank');
+        }
+    </script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var password = "1907!"; // Set your password here
+
+        function checkPassword() {
+            if (localStorage.getItem('passwordEntered') === 'true') {
+                openPDF();
+            } else {
+                var userPassword = prompt("🔎 Για να κατεβάσεις το PDF θα χρειαστείς τον κωδικό που έλαβες στο email:");
+
+                if (userPassword === password) {
+                    localStorage.setItem('passwordEntered', 'true');
+                    openPDF();
+                } else {
+                    alert("❌ Λάθος κωδικός. Προσπάθησε ξανά.");
+                }
+            }
+        }
+
+        document.getElementById('downloadPDFButton').addEventListener('click', checkPassword);
+    });
+
+    function openPDF() {
+        window.open('../content/ΈναΜεΤηνΟμάδα.pdf', '_blank');
+    }
+</script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

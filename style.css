@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'NikolaidisHand';
+    src: url('fonts/NikolaidisHand.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.page-body {
+    background-image: url('images/dall-e-1.png'); /* Replace with the path to your image */
+    background-size: cover; /* Ensure the image covers the entire background */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Prevent the background image from repeating */
+    background-attachment: fixed; /* Make the background image fixed */
+    background-color: #cb171a; /* Replace with your desired color */
+    color: #eed298; /* Replace with your desired text color */
+    font-family: 'NikolaidisHand', Arial, sans-serif; /* Replace with your desired font */
+}
+
+.index-body {
+    background-color: #cb171a; /* Replace with your desired color */
+    color: #eed298; /* Replace with your desired text color */
+    font-family: 'NikolaidisHand', Arial, sans-serif; /* Replace with your desired font */
+}
+
+.hidden-content {
+    display: none;
+}
+
+h1 {
+    font-size: 6vw; /* Scale font size based on viewport width */
+    margin: 0.5em 0; /* Adjust margin as needed */
+}
+
+#head {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: auto;
+    background-color: #316c54; /* Replace with your desired background color */
+    opacity: 0.9; /* Adjust opacity as needed */
+    border-radius: 12px; /* Add rounded corners */
+    border: 1px solid #eed298; /* Add border */
+    /*padding: 0; /* Add padding */
+    text-align: center; /* Center-align text */
+}
+
+h3 {
+    background-color: #921006; /* Replace with your desired background color */
+    opacity: 0.9; /* Adjust opacity as needed */
+    border-radius: 12px; /* Add rounded corners */
+    border: 1px solid #eed298; /* Add border */
+    padding: 5px; /* Add padding */
+    text-align: center; /* Center-align text */
+}
+
+@media (max-width: 800px) {
+    h1 {
+        font-size: 8vw; /* Scale font size based on viewport width for smaller screens */
+    }
+    
+    h3 {
+        font-size: 4.8vw; /* Scale font size based on viewport width for smaller screens */
+    }
+}
+
+@media (min-width: 2000px) {
+    h1 {
+        font-size: 4vw; /* Scale font size based on viewport width for smaller screens */
+    }
+    
+    h3 {
+        font-size: 3vw; /* Scale font size based on viewport width for smaller screens */
+    }
+}
+.advent-calendar-table {
+    margin: 0 auto !important; /* Center-align the table */
+    width: 100%; /* Ensure the table takes up the full width of its container */
+    table-layout: fixed; /* Ensure the table scales based on the container width */
+}
+
+.table th, .table td {
+    padding: 5px;
+    text-align: center; /* Center-align the content */
+    vertical-align: middle; /* Vertically center the content */
+    border: none; /* Remove borders */
+    /* word-wrap: break-word; Ensure content wraps within the cell */
+}
+
+.advent-calendar-table thead th {
+    background-color: #eed298 !important; /* Replace with your desired background color */
+    color: #316c54 !important; /* Replace with your desired text color */
+    border-color: #316c54 !important; /* Replace with your desired border color */
+    font-size: 1.9vw;
+    padding: auto;
+    width: 14.2857%; /* 100% divided by 7 columns */
+    white-space: normal; /* Allow text to wrap */
+}
+
+.table-responsive {
+    overflow-x: auto; /* Allow horizontal scrolling if needed */
+    display: block;
+    width: 100%;
+    -webkit-overflow-scrolling: touch;
+}
+
+.advent-calendar-table td img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0; /* Remove margin from images */
+}
+
+.day-text {
+    margin-bottom: 8px; /* Reduce margin */
+    padding: 0; /* Reduce padding */
+    font-size: 3vw; /* Increase font size */
+    color: #eed298; /* Change text color */
+    background-color: #316c54; /* Change background color */
+    border-radius: 12px; /* Add rounded corners */
+    border: 1px solid #eed298; /* Add border */
+}
+
+/* Fine-tune font size for larger screens */
+@media (max-width: 800px) {
+    .day-text {
+        font-size: 6vw; /* Adjust font size for tablets and larger screens */
+    }
+}
+
+/* Styling for buttons with the class day-button */
+.day-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px !important;
+    margin: 0px !important;
+    border: 1px solid transparent;
+    background-color: #eed298;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 4px 6px #316c54; /* Subtle shadow */
+    transition: all 0.3s ease; /* Smooth transition for hover/click effects */
+    cursor: pointer;
+    flex-direction: column; /* Stack text and image vertically */
+}
+
+/* Styling for images inside buttons with class day-button */
+.day-button img {
+    width: 100%; /* Set image size */
+    height: auto;
+    margin-right: 5px; /* Add spacing if there's text */
+    border-radius: 12px;
+}
+
+/* Hover effects */
+.day-button:hover {
+    box-shadow: 0 6px 10px #eed298; /* Enhanced shadow */
+    border-color: #eed298; /* Change border color */
+}
+
+/* Active (clicked) state */
+.day-button:active {
+    box-shadow: 0 2px 4px #eed298; /* Pressed shadow */
+    transform: scale(0.98); /* Slightly reduce size */
+}
+
+/* Focus state (when clicked) */
+.day-button:focus {
+    border-color: #316c54; /* Change this to your desired color */
+    outline: none; /* Remove default outline */
+}
+
+.btn {
+    font-size: 1.5rem; /* Increase font size */
+    padding: 15px 30px; /* Increase padding */
+    border-radius: 10px; /* Optional: rounded corners */
+}
+
+.btn-primary {
+    background-color: #316c54; /* Change background color */
+    border: none; /* Remove border */
+    color: #eed298; /* Change text color */
+    padding: 5px 10px; /* Add padding */
+    text-align: center; /* Center-align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 1.5rem; /* Change font size */
+    margin: 4px 2px; /* Add margin */
+    cursor: pointer; /* Change cursor to pointer */
+    border-radius: 12px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    border: 1px solid #eed298;
+}
+
+.btn-primary:hover {
+    box-shadow: 0 6px 10px #eed298; /* Enhanced shadow */
+    border-color: #eed298; /* Change border color */
+    background-color: #316c54;
+}
+
+.btn-secondary {
+    background-color: #921006; /* Change background color */
+    border: none; /* Remove border */
+    color: #eed298; /* Change text color */
+    padding: 5px 10px; /* Add padding */
+    text-align: center; /* Center-align text */
+    text-decoration: none; /* Remove underline */
+    display: inline-block; /* Display as inline-block */
+    font-size: 1.5rem; /* Change font size */
+    margin: 4px 2px; /* Add margin */
+    cursor: pointer; /* Change cursor to pointer */
+    border-radius: 12px; /* Add rounded corners */
+    transition: background-color 0.3s ease; /* Add transition for hover effect */
+    border: 1px solid #eed298;
+}
+
+.btn-secondary:hover {
+    box-shadow: 0 6px 10px #eed298; /* Enhanced shadow */
+    border-color: #eed298; /* Change border color */
+    background-color: #921006;
+}
+
+.btn-primary:active,
+.btn-primary:active {
+    background-color: #921006; /* Maintain original background color when clicked */
+}
+
+.btn-secondary:active,
+.btn-secondary:active {
+    background-color: #316c54; /* Maintain original background color when clicked */
+}
+
+#nav-buttons {
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.svg-container {
+    text-align: center; /* Center-align the SVG */
+    margin-top: 20px; /* Add some space above the SVG */
+    margin-bottom: 10px; /* Add some space below the SVG */ 
+}
+
+.svg-container img {
+    max-width: 100%; /* Ensure the SVG scales responsively */
+    height: auto;
+    border-radius: 12px; /* Add rounded corners */
+    border: 1px solid #eed298;
+}
+
+/* Change the color of the indicators */
+.custom-indicators li {
+    background-color: #ffffff; /* Change to your desired color */
+}
+
+.custom-indicators .active {
+    background-color: #eed298; /* Change to your desired color */
+}
