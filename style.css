@@ -27,7 +27,7 @@
 }
 
 h1 {
-    font-size: 6vw; /* Scale font size based on viewport width */
+    font-size: 5.8vw; /* Scale font size based on viewport width */
     margin: 0.5em 0; /* Adjust margin as needed */
 }
 
@@ -54,7 +54,7 @@ h3 {
 
 @media (max-width: 800px) {
     h1 {
-        font-size: 8vw; /* Scale font size based on viewport width for smaller screens */
+        font-size: 7.5vw; /* Scale font size based on viewport width for smaller screens */
     }
     
     h3 {
@@ -64,7 +64,7 @@ h3 {
 
 @media (min-width: 2000px) {
     h1 {
-        font-size: 4vw; /* Scale font size based on viewport width for smaller screens */
+        font-size: 3.8vw; /* Scale font size based on viewport width for smaller screens */
     }
     
     h3 {
